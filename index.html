@@ -4,26 +4,33 @@
     <meta charset="UTF-8" />
     <title>Advanced CSS - Assignment 1</title>
     <style>
-      a[href^="https://www.google.com/"]
+      a[href^="https://www.google.com"]:link
       {
         color: green;
       }
 
-      a[target="_blank"] {
+      a[href="https://www.link-group.eu/"]:link
+      {
         color: red;
       }
 
-      #second-div :nth-child(odd) {
+      #second-div > p:nth-child(2n + 1) {
         color: blue;
       }
 
-      #second-div :nth-child(even) {
+      #second-div > p:nth-child(2n + 2) {
         color: red;
       }
 
-      p::after {
-        content: "-NEW";
+      #first-div > p::after {
+        content: " - NEW";
         color: yellow;
+        font-style: italic;
+      }
+
+      p:nth-child(8):hover {
+        font-style: italic;
+        cursor: none;
       }
     </style>
   </head>
@@ -51,3 +58,4 @@
     <p>Paragraph 10</p>
   </body>
 </html>
+
